@@ -39,8 +39,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 $(OBJ_DIR)/lavendeux.res: $(SRC_DIR)/lavendeux.rc
 	windres $(SRC_DIR)/lavendeux.rc -O coff -o $(OBJ_DIR)/lavendeux.res
 
-$(LIB_DIR)/libinterface.a: $(SRC_DIR)/interface_win32.c
+$(LIB_DIR)/libinterface.a: 
 	$(CC) -c $(SRC_DIR)/interface_win32.c -o $(OBJ_DIR)/interface.o  $(COMPILE_FLAGS)
+	$(CC) -c $(SRC_DIR)/interface_linux.c -o $(OBJ_DIR)/interface.o  $(COMPILE_FLAGS) $(LINUX_FLAGS)
 	$(CC) -c $(SRC_DIR)/language.c -o $(OBJ_DIR)/language.o  $(COMPILE_FLAGS)
 	ar rcs $(LIB_DIR)/libinterface.a $(OBJ_DIR)/interface.o $(OBJ_DIR)/language.o
 
@@ -54,7 +55,7 @@ grammar:
 	flex --outfile=$(LEX_SOURCE) --header-file=$(LEX_HEADER) -B $(SRC_DIR)/grammar.lex
 
 linux: grammar $(LIB_DIR)/libinterface.a $(LIB_DIR)/libparse.a
-	$(CC) $(SRC_DIR)/main.c -o $(BIN_DIR)/lavendeux.exe -linterface -lparse $(COMPILE_FLAGS) $(LINUX_FLAGS)
+	$(CC) $(SRC_DIR)/main.c -o $(BIN_DIR)/lavendeux -linterface -lparse -lX11 $(COMPILE_FLAGS) $(LINUX_FLAGS)
 
 win32: $(OBJ_DIR)/lavendeux.res grammar $(LIB_DIR)/libinterface.a $(LIB_DIR)/libparse.a
 	$(CC) $(OBJ_DIR)/lavendeux.res $(SRC_DIR)/main.c -o $(BIN_DIR)/lavendeux.exe -linterface -lparse $(COMPILE_FLAGS) $(WIN32_FLAGS)

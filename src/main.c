@@ -3,8 +3,6 @@
 #include <string.h>
 #include <wchar.h>
 
-#include <windows.h>
-
 #include "lavendeux.h"
 #include "language.h"
 #include "parse.h"
@@ -27,7 +25,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	/* Config */
-	if (config == NULL && !config_off)
+	if (config == NULL && config_off)
 		config = fopen(config_path(), "r");
 
 	/* Read in settings */
@@ -36,9 +34,9 @@ int main(int argc, char* argv[]) {
 			if (setting < N_SETTINGS)
 				set_setting(setting, value);
 		}
-	}
 
-	fclose(config);
+		fclose(config);
+	}
 
 	/* Main update loop */
 	while (1) {
@@ -87,6 +85,8 @@ void parse_argument(const char* arg) {
  * @param target The input string
  */
 void parse_callback(const wchar_t *target) {
+	if (target == NULL) return;
+	
 	wchar_t* output;
 	wchar_t* output_tmp;
 	wchar_t line[wcslen(target)+1];
