@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Extensions :: Lavendeux</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand navbar-brand-img" href="/Jekyll-testing/">
+            <img alt="Brand" src="img/logo.png">
+          </a>
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/Jekyll-testing/">
+              Lavendeux
+            </a>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            
+              <li >
+                <a href="/Jekyll-testing/">
+                  Home
+                </a>
+              </li>
+            
+              <li >
+                <a href="https://github.com/rscarson/Lavendeux">
+                  View on Github
+                </a>
+              </li>
+            
+              <li >
+                <a href="/Jekyll-testing/downloads">
+                  All Downloads
+                </a>
+              </li>
+            
+              <li class="active">
+                <a href="/Jekyll-testing/extensions">
+                  Extensions
+                </a>
+              </li>
+            
+              <li >
+                <a href="/Jekyll-testinghttps://github.com/rscarson/Lavendeux/issues/new">
+                  Report a Problem
+                </a>
+              </li>
+            
+          </ul>
+
+          <p class="navbar-text navbar-right">CTRL-Space to evaluate expressions from anywhere.</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    <!-- Built-ins panel -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">These extensions come with Lavendeux</h3>
+	</div>
+
+	
+		<div class="panel-body list-toggle" onClick="toggle('1')">
+			<h4>Programming  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="1">
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>complement ( color )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A hexadecimal color code (eg, 0xFF00FF)</dd>
+						
+							<dt>Returns</dt>
+							<dd>The complementary color code</dd>
+						
+							<dt>Note</dt>
+							<dd>Best used with the @h, @hex, or @hexadecimal decorators</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>regex ( regex, value )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A regular expression, and a string</dd>
+						
+							<dt>Returns</dt>
+							<dd>The first match for regex in value</dd>
+						
+							<dt>Note</dt>
+							<dd>Uses <a href='https://docs.python.org/2/library/re.html'>Python regex syntax</a></dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>strlen ( string )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A string</dd>
+						
+							<dt>Returns</dt>
+							<dd>The number of characters in the string</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>tail ( filename, max_lines )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A string filename, and an optional maximum number of lines</dd>
+						
+							<dt>Returns</dt>
+							<dd>Up to max_lines from the end of the file, or many complete lines as possible up to 4095 characters</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>unixtime ()</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>None</dd>
+						
+							<dt>Returns</dt>
+							<dd>The current unix timestamp</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>@unixtime</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Effect</dt>
+							<dd>Formats a unix timestamp into human readable format</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>urldecode ( string )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A urlencoded string</dd>
+						
+							<dt>Returns</dt>
+							<dd>The string, decoded</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>urlencode ( string )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A string</dd>
+						
+							<dt>Returns</dt>
+							<dd>The string, urlencoded</dd>
+						
+					</dl>
+				</li>
+			
+		</ul>
+	
+		<div class="panel-body list-toggle" onClick="toggle('2')">
+			<h4>Networking  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="2">
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>hostname ( address )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>An IP address, in string format</dd>
+						
+							<dt>Returns</dt>
+							<dd>The FQDN associated to that IP, or the IP on failure</dd>
+						
+							<dt>Note</dt>
+							<dd>500ms timeout</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>ping ( address )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>An IP address, or FQDN in string format</dd>
+						
+							<dt>Returns</dt>
+							<dd>The number of milliseconds needed to ping the target, in ms</dd>
+						
+							<dt>Note</dt>
+							<dd>Only works if Lavendeux is started as administrator, 500ms timeout</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>resolve ( address )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A FQDN</dd>
+						
+							<dt>Returns</dt>
+							<dd>The IP address associated with hostname, or the hostname on failure</dd>
+						
+							<dt>Note</dt>
+							<dd>500ms timeout</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>wget ( address )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A url string</dd>
+						
+							<dt>Returns</dt>
+							<dd>Up to 4095 characters from a plaintext resource at url</dd>
+						
+							<dt>Note</dt>
+							<dd>Assumes HTTP if not specified, 500ms timeout</dd>
+						
+					</dl>
+				</li>
+			
+		</ul>
+	
+		<div class="panel-body list-toggle" onClick="toggle('3')">
+			<h4>Randomization  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="3">
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>choose ( ... )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>Any number of any combination of types</dd>
+						
+							<dt>Returns</dt>
+							<dd>One of its arguments at random</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>rand ()</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>None</dd>
+						
+							<dt>Returns</dt>
+							<dd>A random floating point between 0 and 1</dd>
+						
+					</dl>
+				</li>
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>rand ( min, max )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>2 integers defining inclusive range</dd>
+						
+							<dt>Returns</dt>
+							<dd>A random integer inside that range</dd>
+						
+					</dl>
+				</li>
+			
+		</ul>
+	
+		<div class="panel-body list-toggle" onClick="toggle('4')">
+			<h4>Language  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="4">
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.1</small>
+					<h5>synonym ( word, type )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A word, and an option descriptor (eg: noun or verb)</dd>
+						
+							<dt>Returns</dt>
+							<dd>A random synonym of the same type as word, if specified</dd>
+						
+							<dt>Note</dt>
+							<dd>To use this, please get an API key from <a href='https://words.bighugelabs.com/api.php'>here</a> and add it to <strong>apis.py</strong>. Only 1000 total requests per day can be made on the API key used to demonstrate the feature</dd>
+						
+					</dl>
+				</li>
+			
+		</ul>
+	
+		<div class="panel-body list-toggle" onClick="toggle('5')">
+			<h4>Misc  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="5">
+			
+				<li class="list-group-item">
+					<small class="text-muted">Added in 0.5.0</small>
+					<h5>pokedex ( pokemon )</h5>
+					<dl class="dl-horizontal">
+						
+							<dt>Arguments</dt>
+							<dd>A pokemon's name as a string, or its pokedex number</dd>
+						
+							<dt>Returns</dt>
+							<dd>The pokedex number for that name, or the name for that pokedex number</dd>
+						
+							<dt>Note</dt>
+							<dd>Pokemon, Pokedex and all other related names are the sole property of the Pokemon Company</dd>
+						
+					</dl>
+				</li>
+			
+		</ul>
+	
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Building extensions</h3>
+	</div>
+	<div class="panel-body">
+		<p>Extensions are written in python, and placed in the extensions directory, wherever Lavendeux was installed. They are called by the name of the module in which they are placed, eg: ping.py is called with ping()</p>
+		<p>Below is a simple example of an extension that adds 2 numbers, and can be used as a decorator.</p>
+		<p>For more in depth information about extensions, click <a href="https://github.com/rscarson/Lavendeux/wiki/Extensions#functions">here</a></p></p>
+		<pre>
+<code class="language-python">from lavendeux import Types, Errors
+
+def call(args):
+        # Check number of arguments
+        if len(args) != 2:
+            return (Types.ERROR, Errors.INVALID_ARGS)
+
+        # Return answer
+    return (Types.FLOAT, args[0] + args[1])
+
+def decorate(value):
+        return "Decorated!"
+
+def help():
+    return "Help message"</code>
+		</pre>  
+	</div>
+</div>
+
+    <p class="footer text-muted">Copyright Richard Carson, 2016</p>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+
+    <script type="text/javascript">
+      function toggle(id) {
+        var e = document.getElementById(id);
+
+        if (e.style.maxHeight == "0px") {
+          e.style.maxHeight = "999px";
+          e.style.transition = "max-height 0.25s ease-in";
+        } else {
+          e.style.maxHeight = "0";
+          e.style.transition = "max-height 0.25s ease-out";
+        }
+      }
+    </script>
+  </body>
+</html>

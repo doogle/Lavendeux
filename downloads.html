@@ -1,0 +1,81 @@
+---
+layout: default
+permalink: /downloads
+title: Downloads
+---
+<div class="table-responsive">
+	<table class="table table-striped">
+		<tr>
+			<th>Release</th>
+			<th></th>
+		</tr>
+		{% for release in site.data.releases %}
+			<tr>
+				<td><h4>{{ release.name }}</h4>
+					Change log
+					<ul>
+						{% for change in release.changelog %}
+							<li>{{ change }}</li>
+						{% endfor %}
+					</ul>
+				</td>
+				<td>
+					<!-- For large screens -->
+					<div class="btn-group pull-right hidden-xs" role="group">
+						<!-- Windows downloads -->
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Download for Windows
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="{{ release.downloads.win_install }}">Installer</a></li>
+								<li><a href="{{ release.downloads.win_zip }}">Portable</a></li>
+							</ul>
+						</div>
+
+						<!-- Source downloads -->
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Source Code
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="{{ release.downloads.github }}">View on Github</a></li>
+								<li><a href="{{ release.downloads.source }}">Download</a></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+
+					<!-- For small screens -->
+					<div class="btn-group-vertical pull-right visible-xs" role="group">
+						<!-- Windows downloads -->
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Download for Windows
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="{{ release.downloads.win_install }}">Installer</a></li>
+								<li><a href="{{ release.downloads.win_zip }}">Portable</a></li>
+							</ul>
+						</div>
+
+						<!-- Source downloads -->
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Source Code
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="{{ release.downloads.github }}">View on Github</a></li>
+								<li><a href="{{ release.downloads.source }}">Download</a></li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>

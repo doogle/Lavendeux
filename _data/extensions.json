@@ -1,0 +1,174 @@
+[
+	{
+		"name": "Programming",
+		"extensions": [
+			{
+				"name": "complement ( color )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A hexadecimal color code (eg, 0xFF00FF)"},
+					{"name": "Returns", "value": "The complementary color code"},
+					{"name": "Note", "value": "Best used with the @h, @hex, or @hexadecimal decorators"}
+				]
+			},
+			{
+				"name": "regex ( regex, value )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A regular expression, and a string"},
+					{"name": "Returns", "value": "The first match for regex in value"},
+					{"name": "Note", "value": "Uses <a href='https://docs.python.org/2/library/re.html'>Python regex syntax</a>"}
+				]
+			},
+			{
+				"name": "strlen ( string )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A string"},
+					{"name": "Returns", "value": "The number of characters in the string"},
+				]
+			},
+			{
+				"name": "tail ( filename, max_lines )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A string filename, and an optional maximum number of lines"},
+					{"name": "Returns", "value": "Up to max_lines from the end of the file, or many complete lines as possible up to 4095 characters"},
+				]
+			},
+			{
+				"name": "unixtime ()",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "None"},
+					{"name": "Returns", "value": "The current unix timestamp"},
+				]
+			},
+			{
+				"name": "@unixtime",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Effect", "value": "Formats a unix timestamp into human readable format"},
+				]
+			},
+			{
+				"name": "urldecode ( string )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A urlencoded string"},
+					{"name": "Returns", "value": "The string, decoded"},
+				]
+			},
+			{
+				"name": "urlencode ( string )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A string"},
+					{"name": "Returns", "value": "The string, urlencoded"},
+				]
+			},
+		]
+	},
+
+	{
+		"name": "Networking",
+		"extensions": [
+			{
+				"name": "hostname ( address )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "An IP address, in string format"},
+					{"name": "Returns", "value": "The FQDN associated to that IP, or the IP on failure"},
+					{"name": "Note", "value": "500ms timeout"},
+				]
+			},
+			{
+				"name": "ping ( address )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "An IP address, or FQDN in string format"},
+					{"name": "Returns", "value": "The number of milliseconds needed to ping the target, in ms"},
+					{"name": "Note", "value": "Only works if Lavendeux is started as administrator, 500ms timeout"},
+				]
+			},
+			{
+				"name": "resolve ( address )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A FQDN"},
+					{"name": "Returns", "value": "The IP address associated with hostname, or the hostname on failure"},
+					{"name": "Note", "value": "500ms timeout"},
+				]
+			},
+			{
+				"name": "wget ( address )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A url string"},
+					{"name": "Returns", "value": "Up to 4095 characters from a plaintext resource at url"},
+					{"name": "Note", "value": "Assumes HTTP if not specified, 500ms timeout"},
+				]
+			},
+		]
+	},
+
+	{
+		"name": "Randomization",
+		"extensions": [
+			{
+				"name": "choose ( ... )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "Any number of any combination of types"},
+					{"name": "Returns", "value": "One of its arguments at random"},
+				]
+			},
+			{
+				"name": "rand ()",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "None"},
+					{"name": "Returns", "value": "A random floating point between 0 and 1"},
+				]
+			},
+			{
+				"name": "rand ( min, max )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "2 integers defining inclusive range"},
+					{"name": "Returns", "value": "A random integer inside that range"},
+				]
+			}
+		]
+	},
+
+	{
+		"name": "Language",
+		"extensions": [
+			{
+				"name": "synonym ( word, type )",
+				"added_in": "0.5.1",
+				"properties": [
+					{"name": "Arguments", "value": "A word, and an option descriptor (eg: noun or verb)"},
+					{"name": "Returns", "value": "A random synonym of the same type as word, if specified"},
+					{"name": "Note", "value": "To use this, please get an API key from <a href='https://words.bighugelabs.com/api.php'>here</a> and add it to <strong>apis.py</strong>. Only 1000 total requests per day can be made on the API key used to demonstrate the feature"},
+				]
+			},
+		]
+	},
+
+	{
+		"name": "Misc",
+		"extensions": [
+			{
+				"name": "pokedex ( pokemon )",
+				"added_in": "0.5.0",
+				"properties": [
+					{"name": "Arguments", "value": "A pokemon's name as a string, or its pokedex number"},
+					{"name": "Returns", "value": "The pokedex number for that name, or the name for that pokedex number"},
+					{"name": "Note", "value": "Pokemon, Pokedex and all other related names are the sole property of the Pokemon Company"},
+				]
+			},
+		]
+	},
+]

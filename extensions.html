@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: /extensions
+title: Extensions
+---
+<!-- Built-ins panel -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">These extensions come with Lavendeux</h3>
+	</div>
+
+	{% for extension_category in site.data.extensions %}
+		<div class="panel-body list-toggle" onClick="toggle('{{ forloop.index }}')">
+			<h4>{{ extension_category.name}}  <span class="caret"></h4>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="{{ forloop.index }}">
+			{% for extension in extension_category.extensions %}
+				<li class="list-group-item">
+					<small class="text-muted">Added in {{ extension.added_in }}</small>
+					<h5>{{ extension.name }}</h5>
+					<dl class="dl-horizontal">
+						{% for property in extension.properties %}
+							<dt>{{ property.name }}</dt>
+							<dd>{{ property.value }}</dd>
+						{% endfor %}
+					</dl>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endfor %}
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Building extensions</h3>
+	</div>
+	<div class="panel-body">
+		<p>Extensions are written in python, and placed in the extensions directory, wherever Lavendeux was installed. They are called by the name of the module in which they are placed, eg: ping.py is called with ping()</p>
+		<p>Below is a simple example of an extension that adds 2 numbers, and can be used as a decorator.</p>
+		<p>For more in depth information about extensions, click <a href="https://github.com/rscarson/Lavendeux/wiki/Extensions#functions">here</a></p></p>
+		<pre>
+<code class="language-python">{% include extensions_sample.py %}</code>
+		</pre>  
+	</div>
+</div>
