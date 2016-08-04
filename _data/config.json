@@ -1,3 +1,5 @@
 {
-	"path": "/Lavendeux"
+	"path": "/Lavendeux",
+	"description": "Use CTRL-Space to evaluate expressions from anywhere with Lavendeux.",
+	"tags": "Lavendeux, software, Github, expressions, download, Python, extensions"
 }
