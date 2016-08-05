@@ -40,7 +40,7 @@
 	},
 
 	{
-		"text": "These trigonometric functions (Angles are in degrees by default!)",
+		"text": "These trigonometric functions (angles are in degrees by default!)",
 		"operators": [
 			{"name": "Tangent", "operator": "tan(value)"},
 			{"name": "Cosine", "operator": "cos(value)"},
@@ -55,7 +55,7 @@
 	},
 
 	{
-		"text": "And the output format can be changed by added one of these decorators to the end of an expression ators",
+		"text": "And the output format can be changed by added one of these decorators to the end of an expression",
 		"operators": [
 			{"name": "Integer", "operator": "@i, @int, @integer"},
 			{"name": "Floating point", "operator": "@f, @float"},
