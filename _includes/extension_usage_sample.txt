@@ -1,0 +1,4 @@
+regex("[0-9]+", "Hello World 1234")
+resolve('google.ca')
+choose("First", "Second", 3)
+synonym("test", verb)
