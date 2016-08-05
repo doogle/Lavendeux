@@ -1,20 +1,19 @@
 [
 	{
-		"name": "Beta Version 0.5.1",
+		"name": "Beta Version 0.5.3",
 		"changelog": [
-			"Added synonyms extension",
-			"Fixed crash bug when reloading a faulty extension"
+			"Fixed a crash when repeatedly calling an extension"
 		],
 		"downloads": {
-			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux-setup.exe",
-			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux.zip",
-			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.1-beta2",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.1-beta2.tar.gz",
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta3/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta3/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.3-beta3",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta3.tar.gz",
 		}
 	},
 
 	{
-		"name": "Beta Version 0.5.1 (No extensions)",
+		"name": "Beta Version 0.5.1",
 		"changelog": [
 			"Added synonyms extension",
 			"Fixed crash bug when reloading a faulty extension"
