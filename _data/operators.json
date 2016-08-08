@@ -73,9 +73,9 @@
 			{"name": "Floating point", "operator": "123.4"},
 			{"name": "Scientific notation", "operator": "1.23e+4 / 1.23e-4"},
 			{"name": "Binary", "operator": "0b111"},
-			{"name": "Octal", "operator": "0o777"},
-			{"name": "Hexadecimal", "operator": "0o777"},
-			{"name": "String (mostly for extensions)", "operator": "\"string\" / 'string'"}
+			{"name": "Octal", "operator": "0o777 / 0777"},
+			{"name": "Hexadecimal", "operator": "0xFE / #FF00FF"},
+			{"name": "String", "operator": "\"string\" / 'string'"}
 		]
 	}
 ]
