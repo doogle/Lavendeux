@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta name="description" content="Use CTRL-Space to evaluate expressions from anywhere with Lavendeux.">
+		<meta name="description" content="Lavendeux inlines calculating, programming and testing utilities into your favourite text editor.">
 		<meta name="tags" content="Lavendeux, software, Github, expressions, download, Python, extensions">
 		<meta name="author" content="Richard Carson">
 
@@ -263,9 +263,26 @@ synonym("test", "verb")</textarea>
 		</ul>
 	
 		<div class="panel-body list-toggle" onClick="toggle('4')">
-			These trigonometric functions (angles are in degrees by default!) <span class="caret"></span>
+			These string functions <span class="caret"></span>
 		</div>
 		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="4">
+			
+				<li class="list-group-item"><strong>Concatenation</strong> <small>( + )</small></li>
+			
+				<li class="list-group-item"><strong>String length</strong> <small>strlen(value)</small></li>
+			
+				<li class="list-group-item"><strong>Substring</strong> <small>substr(string, start, length)</small></li>
+			
+				<li class="list-group-item"><strong>Character code to character</strong> <small>chr(value)</small></li>
+			
+				<li class="list-group-item"><strong>Character to character code</strong> <small>ord(value)</small></li>
+			
+		</ul>
+	
+		<div class="panel-body list-toggle" onClick="toggle('5')">
+			These trigonometric functions (angles are in degrees by default!) <span class="caret"></span>
+		</div>
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="5">
 			
 				<li class="list-group-item"><strong>Tangent</strong> <small>tan(value)</small></li>
 			
@@ -287,10 +304,10 @@ synonym("test", "verb")</textarea>
 			
 		</ul>
 	
-		<div class="panel-body list-toggle" onClick="toggle('5')">
+		<div class="panel-body list-toggle" onClick="toggle('6')">
 			And the output format can be changed by added one of these decorators to the end of an expression <span class="caret"></span>
 		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="5">
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="6">
 			
 				<li class="list-group-item"><strong>Integer</strong> <small>@i, @int, @integer</small></li>
 			
@@ -304,12 +321,14 @@ synonym("test", "verb")</textarea>
 			
 				<li class="list-group-item"><strong>Hexidecimal</strong> <small>@h, @hex, @hexadecimal</small></li>
 			
+				<li class="list-group-item"><strong>HTML color code</strong> <small>@c, @color, @colour</small></li>
+			
 		</ul>
 	
-		<div class="panel-body list-toggle" onClick="toggle('6')">
+		<div class="panel-body list-toggle" onClick="toggle('7')">
 			Values in expressions are recognized in these formats <span class="caret"></span>
 		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="6">
+		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="7">
 			
 				<li class="list-group-item"><strong>Integer</strong> <small>1234</small></li>
 			

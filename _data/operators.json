@@ -46,7 +46,7 @@
 			{"name": "String length", "operator": "strlen(value)"},
 			{"name": "Substring", "operator": "substr(string, start, length)"},
 			{"name": "Character code to character", "operator": "chr(value)"},
-			{"name": "Character to character code", "operator": "ord(value)"},
+			{"name": "Character to character code", "operator": "ord(value)"}
 		]
 	},
 
@@ -73,7 +73,7 @@
 			{"name": "Scientific notation", "operator": "@sci, @scientific"},
 			{"name": "Binary", "operator": "@b, @bin, @binary"},
 			{"name": "Octal", "operator": "@o, @oct, @octal"},
-			{"name": "Hexidecimal", "operator": "@h, @hex, @hexadecimal"}
+			{"name": "Hexidecimal", "operator": "@h, @hex, @hexadecimal"},
 			{"name": "HTML color code", "operator": "@c, @color, @colour"}
 		]
 	},
