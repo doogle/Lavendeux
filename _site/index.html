@@ -89,7 +89,7 @@
 						
 					</ul>
 
-					<p class="navbar-text navbar-right">CTRL-Space to evaluate expressions from anywhere.</p>
+					<p class="navbar-text navbar-right hidden-xs">CTRL-Space to evaluate expressions from anywhere.</p>
 				</div>
 			</div>
 		</nav>
@@ -100,7 +100,9 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
 		<div class="well text-center">
-			<h4>Most recent version <small>Beta Version 0.5.2</small></h4>
+			<h2>Lavendeux enhances the clipboard</h2>
+			<p>Lavendeux inlines calculating, programming and testing utilities into your favourite text editor. Test the result of a remote API call, check the result of a regular expression and much more, all without needing to break your workflow.</p>
+			<h4>Most recent version <small>Beta Version 0.5.4</small></h4>
 			<p><a href="/Lavendeux/downloads">More downloads</a></p>
 
 			<!-- For large screens -->
@@ -112,8 +114,8 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux-setup.exe">Installer</a></li>
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux.zip">Portable</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-setup.exe">Installer</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux.zip">Portable</a></li>
 					</ul>
 				</div>
 
@@ -124,8 +126,8 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/tag/v0.5.2-beta3">View on Github</a></li>
-						<li><a href="https://github.com/rscarson/Lavendeux/archive/v0.5.2-beta3.tar.gz">Download</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5">View on Github</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz">Download</a></li>
 					</ul>
 				</div>
 			</div>
@@ -139,8 +141,8 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux-setup.exe">Installer</a></li>
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux.zip">Portable</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-setup.exe">Installer</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux.zip">Portable</a></li>
 					</ul>
 				</div>
 
@@ -151,8 +153,8 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="https://github.com/rscarson/Lavendeux/releases/tag/v0.5.2-beta3">View on Github</a></li>
-						<li><a href="https://github.com/rscarson/Lavendeux/archive/v0.5.2-beta3.tar.gz">Download</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5">View on Github</a></li>
+						<li><a href="https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz">Download</a></li>
 					</ul>
 				</div>
 			</div>
@@ -184,7 +186,7 @@ x**3 @hex</textarea>
 		<textarea class="form-control pre" rows="4">regex("[0-9]+", "Hello World 1234")
 resolve('google.ca')
 choose("First", "Second", 3)
-synonym("test", verb)</textarea>
+synonym("test", "verb")</textarea>
 	</div>
 </div>
 
@@ -317,11 +319,11 @@ synonym("test", verb)</textarea>
 			
 				<li class="list-group-item"><strong>Binary</strong> <small>0b111</small></li>
 			
-				<li class="list-group-item"><strong>Octal</strong> <small>0o777</small></li>
+				<li class="list-group-item"><strong>Octal</strong> <small>0o777 / 0777</small></li>
 			
-				<li class="list-group-item"><strong>Hexadecimal</strong> <small>0o777</small></li>
+				<li class="list-group-item"><strong>Hexadecimal</strong> <small>0xFE / #FF00FF</small></li>
 			
-				<li class="list-group-item"><strong>String (mostly for extensions)</strong> <small>"string" / 'string'</small></li>
+				<li class="list-group-item"><strong>String</strong> <small>"string" / 'string'</small></li>
 			
 		</ul>
 	
@@ -347,7 +349,7 @@ synonym("test", verb)</textarea>
 				var e = document.getElementById(id);
 
 				if (e.style.maxHeight == "0px") {
-					e.style.maxHeight = "999px";
+					e.style.maxHeight = "9999px";
 					e.style.transition = "max-height 0.25s ease-in";
 				} else {
 					e.style.maxHeight = "0";
