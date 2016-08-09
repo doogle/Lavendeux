@@ -1,0 +1,9 @@
+[
+	{"name": "Integer", "sample": "1234"},
+	{"name": "Floating point", "sample": "123.4"},
+	{"name": "Scientific notation", "sample": "1.23e+4 / 1.23e-4"},
+	{"name": "Binary", "sample": "0b111"},
+	{"name": "Octal", "sample": "0o777 / 0777"},
+	{"name": "Hexadecimal", "sample": "0xFE / #FF00FF"},
+	{"name": "String", "sample": "\"string\" / 'string'"}
+]

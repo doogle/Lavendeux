@@ -1,0 +1,41 @@
+[
+	{
+		"name": "Mathematical Functions",
+		"operators": [
+			{"name": "Round value up to nearest integer", "operator": "ceil(value)"},
+			{"name": "Round value down to nearest integer", "operator": "floor(value)"},
+			{"name": "Round value to n decimal places", "operator": "round(value, n)"},
+			{"name": "Absolute value", "operator": "abs(value)"},
+			{"name": "Base 10 logarithm", "operator": "log10(value)"},
+			{"name": "Natural logarithm", "operator": "ln(value)"},
+			{"name": "Square root", "operator": "sqrt(value)"},
+			{"name": "Nth root", "operator": "root(value, n)"}
+		]
+	},
+
+	{
+		"name": "String Functions",
+		"operators": [
+			{"name": "Concatenation", "operator": "( + )"},
+			{"name": "String length", "operator": "strlen(value)"},
+			{"name": "Substring", "operator": "substr(string, start, length)"},
+			{"name": "Character code to character", "operator": "chr(value)"},
+			{"name": "Character to character code", "operator": "ord(value)"}
+		]
+	},
+
+	{
+		"name": "Trigonometric Functions (angles are in degrees by default!)",
+		"operators": [
+			{"name": "Tangent", "operator": "tan(value)"},
+			{"name": "Cosine", "operator": "cos(value)"},
+			{"name": "Sine", "operator": "sin(value)"},
+			{"name": "Arc tangent", "operator": "atan(value)"},
+			{"name": "Arc cosine", "operator": "acos(value)"},
+			{"name": "Arc sine", "operator": "asin(value)"},
+			{"name": "Hyperbolic tangent", "operator": "tanh(value)"},
+			{"name": "Hyperbolic cosine", "operator": "cosh(value)"},
+			{"name": "Hyperbolic sine", "operator": "sinh(value)"}
+		]
+	},
+]

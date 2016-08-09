@@ -1,6 +1,6 @@
 [
 	{
-		"text": "Lavendeux supports the following mathematical operators",
+		"name": "Mathematical Operators",
 		"operators": [
 			{"name": "Subtraction", "operator": "( - )"},
 			{"name": "Addition", "operator": "( + )"},
@@ -14,7 +14,7 @@
 	},
 
 	{
-		"text": "As well as the following binary operators",
+		"name": "Binary Operators",
 		"operators": [
 			{"name": "And", "operator": "( &amp; )"},
 			{"name": "Or", "operator": "( | )"},
@@ -22,72 +22,6 @@
 			{"name": "Not", "operator": "( ~ )"},
 			{"name": "Left shift", "operator": "( &lt; )"},
 			{"name": "Right shift", "operator": "( &gt; )"}
-		]
-	},
-
-	{
-		"text": "These mathematical functions",
-		"operators": [
-			{"name": "Round value up to nearest integer", "operator": "ceil(value)"},
-			{"name": "Round value down to nearest integer", "operator": "floor(value)"},
-			{"name": "Round value to n decimal places", "operator": "round(value, n)"},
-			{"name": "Absolute value", "operator": "abs(value)"},
-			{"name": "Base 10 logarithm", "operator": "log10(value)"},
-			{"name": "Natural logarithm", "operator": "ln(value)"},
-			{"name": "Square root", "operator": "sqrt(value)"},
-			{"name": "Nth root", "operator": "root(value, n)"}
-		]
-	},
-
-	{
-		"text": "These string functions",
-		"operators": [
-			{"name": "Concatenation", "operator": "( + )"},
-			{"name": "String length", "operator": "strlen(value)"},
-			{"name": "Substring", "operator": "substr(string, start, length)"},
-			{"name": "Character code to character", "operator": "chr(value)"},
-			{"name": "Character to character code", "operator": "ord(value)"}
-		]
-	},
-
-	{
-		"text": "These trigonometric functions (angles are in degrees by default!)",
-		"operators": [
-			{"name": "Tangent", "operator": "tan(value)"},
-			{"name": "Cosine", "operator": "cos(value)"},
-			{"name": "Sine", "operator": "sin(value)"},
-			{"name": "Arc tangent", "operator": "atan(value)"},
-			{"name": "Arc cosine", "operator": "acos(value)"},
-			{"name": "Arc sine", "operator": "asin(value)"},
-			{"name": "Hyperbolic tangent", "operator": "tanh(value)"},
-			{"name": "Hyperbolic cosine", "operator": "cosh(value)"},
-			{"name": "Hyperbolic sine", "operator": "sinh(value)"}
-		]
-	},
-
-	{
-		"text": "And the output format can be changed by added one of these decorators to the end of an expression",
-		"operators": [
-			{"name": "Integer", "operator": "@i, @int, @integer"},
-			{"name": "Floating point", "operator": "@f, @float"},
-			{"name": "Scientific notation", "operator": "@sci, @scientific"},
-			{"name": "Binary", "operator": "@b, @bin, @binary"},
-			{"name": "Octal", "operator": "@o, @oct, @octal"},
-			{"name": "Hexidecimal", "operator": "@h, @hex, @hexadecimal"},
-			{"name": "HTML color code", "operator": "@c, @color, @colour"}
-		]
-	},
-
-	{
-		"text": "Values in expressions are recognized in these formats",
-		"operators": [
-			{"name": "Integer", "operator": "1234"},
-			{"name": "Floating point", "operator": "123.4"},
-			{"name": "Scientific notation", "operator": "1.23e+4 / 1.23e-4"},
-			{"name": "Binary", "operator": "0b111"},
-			{"name": "Octal", "operator": "0o777 / 0777"},
-			{"name": "Hexadecimal", "operator": "0xFE / #FF00FF"},
-			{"name": "String", "operator": "\"string\" / 'string'"}
 		]
 	}
 ]

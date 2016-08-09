@@ -1,0 +1,131 @@
+---
+layout: default
+permalink: /features
+title: Features
+---
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Syntax and usage help</h3>
+	</div>
+
+	<div class="panel-body">
+		<p>Press <kbd><kbd>ctrl</kbd> + <kbd>space</kbd></kbd> to replace a highlighted snippet of text with it's result.</p>
+		<p>Multiline expressions are supported</p>
+	</div>
+</div>
+
+<div class="page-header">
+  <h1>Types</h1>
+</div>
+
+<!-- Types -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" style="cursor:pointer" onClick="toggle('d')">Supported Types <span class="caret"></h3>
+	</div>
+
+	<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="d">
+		{% for type in site.data.types %}
+			<li class="list-group-item">
+				<h5>{{ type.name }}</h5>
+				<dl class="dl-horizontal">
+					<dt>Example</dt>
+					<dd>{{ type.sample }}</dd>
+				</dl>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="page-header">
+  <h1>Operators</h1>
+</div>
+
+<!-- Operators and built in functions -->
+{% for operator_category in site.data.operators %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" style="cursor:pointer" onClick="toggle('o{{ forloop.index }}')">{{ operator_category.name}} <span class="caret"></h3>
+	</div>
+
+	<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="o{{ forloop.index }}">
+		{% for operator in operator_category.operators %}
+			<li class="list-group-item"><strong>{{ operator.name }}</strong> <small>{{ operator.operator }}</small></li>
+		{% endfor %}
+	</ul>
+</div>
+{% endfor %}
+
+<div class="page-header">
+  <h1>Functions</h1>
+</div>
+
+<!-- Operators and built in functions -->
+{% for function_category in site.data.functions %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" style="cursor:pointer" onClick="toggle('f{{ forloop.index }}')">{{ function_category.name}} <span class="caret"></h3>
+	</div>
+
+	<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="f{{ forloop.index }}">
+		{% for function in function_category.operators %}
+			<li class="list-group-item"><strong>{{ function.name }}</strong> <small>{{ function.operator }}</small></li>
+		{% endfor %}
+	</ul>
+</div>
+{% endfor %}
+
+<div class="page-header">
+  <h1>Decorators</h1>
+</div>
+
+<!-- Decorators -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" style="cursor:pointer" onClick="toggle('d')">Built-in Decorators <span class="caret"</h3>
+	</div>
+
+	<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="d">
+		{% for decorator in site.data.decorators %}
+			<li class="list-group-item">
+				<h5>{{ decorator.name }}</h5>
+				<dl class="dl-horizontal">
+					<dt>Usage</dt>
+					<dd>{{ decorator.operator }}</dd>
+
+					<dt>Sample output</dt>
+					<dd>{{ decorator.sample }}</dd>
+				</dl>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="page-header">
+  <h1>Extensions</h1>
+</div>
+
+<!-- Built-ins panel -->
+{% for extension_category in site.data.extensions %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" style="cursor:pointer" onClick="toggle('e{{ forloop.index }}')">{{ extension_category.name}} Extensions <span class="caret"></h3>
+	</div>
+
+	<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="e{{ forloop.index }}">
+		{% for extension in extension_category.extensions %}
+			<li class="list-group-item">
+				<small class="text-muted">Added in {{ extension.added_in }}</small>
+				<h5>{{ extension.name }}</h5>
+				<dl class="dl-horizontal">
+					{% for property in extension.properties %}
+						<dt>{{ property.name }}</dt>
+						<dd>{{ property.value }}</dd>
+					{% endfor %}
+				</dl>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endfor %}

@@ -97,17 +97,10 @@ title: Home
 	<div class="panel-heading">
 		<h3 class="panel-title">What it can do</h3>
 	</div>
-
-	{% for operator_category in site.data.operators %}
-		<div class="panel-body list-toggle" onClick="toggle('{{ forloop.index }}')">
-			{{ operator_category.text }} <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="{{ forloop.index }}">
-			{% for operator in operator_category.operators %}
-				<li class="list-group-item"><strong>{{ operator.name }}</strong> <small>{{ operator.operator }}</small></li>
-			{% endfor %}
-		</ul>
-	{% endfor %}
+	
+	<div class="panel-body">
+		Please click <a href="{{ site.data.config.path }}/usage">here</a> for usage help, and a list of features
+	</div>
 
 	<div class="panel-body">
 		<dt>There are also many functions and decorators added by extensions, including many relevant to programming, and writing</dt>

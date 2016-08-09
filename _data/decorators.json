@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Integer", 
+		"operator": "@i, @int, @integer",
+		"sample": "1234"
+	},
+
+	{
+		"name": "Floating point", 
+		"operator": "@f, @float",
+		"sample": "12.34"
+	},
+
+	{
+		"name": "Scientific notation", 
+		"operator": "@sci, @scientific",
+		"sample": "1.23E+2"
+	},
+
+	{
+		"name": "Binary", 
+		"operator": "@b, @bin, @binary",
+		"sample": "0b0101"
+	},
+
+	{
+		"name": "Octal", 
+		"operator": "@o, @oct, @octal",
+		"sample": "0777"
+	},
+
+	{
+		"name": "Hexadecimal", 
+		"operator": "@h, @hex, @hexadecimal",
+		"sample": "0xFF"
+	},
+
+	{
+		"name": "HTML color code", 
+		"operator": "@c, @color, @colour",
+		"sample": "#FF00DD"
+	}
+]

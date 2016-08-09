@@ -1,5 +1,6 @@
 [
 	{"title": "Home", "url": "/", "relative": true},
+	{"title": "Features", "url": "/features", "relative": true},
 	{"title": "View on Github", "url": "https://github.com/rscarson/Lavendeux", "relative": false},
 	{"title": "All Downloads", "url": "/downloads", "relative": true},
 	{"title": "Extensions", "url": "/extensions", "relative": true},

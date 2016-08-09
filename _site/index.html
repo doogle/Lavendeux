@@ -64,6 +64,12 @@
 							</li>
 						
 							<li >
+								<a href="/Lavendeux/features">
+									Features
+								</a>
+							</li>
+						
+							<li >
 								<a href="https://github.com/rscarson/Lavendeux">
 									View on Github
 								</a>
@@ -195,157 +201,10 @@ synonym("test", "verb")</textarea>
 	<div class="panel-heading">
 		<h3 class="panel-title">What it can do</h3>
 	</div>
-
 	
-		<div class="panel-body list-toggle" onClick="toggle('1')">
-			Lavendeux supports the following mathematical operators <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="1">
-			
-				<li class="list-group-item"><strong>Subtraction</strong> <small>( - )</small></li>
-			
-				<li class="list-group-item"><strong>Addition</strong> <small>( + )</small></li>
-			
-				<li class="list-group-item"><strong>Subtraction</strong> <small>( - )</small></li>
-			
-				<li class="list-group-item"><strong>Multiplication</strong> <small>( * )</small></li>
-			
-				<li class="list-group-item"><strong>Division</strong> <small>( / )</small></li>
-			
-				<li class="list-group-item"><strong>Exponentiation</strong> <small>( ** )</small></li>
-			
-				<li class="list-group-item"><strong>Modulus</strong> <small>( % )</small></li>
-			
-				<li class="list-group-item"><strong>Factorial</strong> <small>( ! )</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('2')">
-			As well as the following binary operators <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="2">
-			
-				<li class="list-group-item"><strong>And</strong> <small>( &amp; )</small></li>
-			
-				<li class="list-group-item"><strong>Or</strong> <small>( | )</small></li>
-			
-				<li class="list-group-item"><strong>Xor</strong> <small>( ^ )</small></li>
-			
-				<li class="list-group-item"><strong>Not</strong> <small>( ~ )</small></li>
-			
-				<li class="list-group-item"><strong>Left shift</strong> <small>( &lt; )</small></li>
-			
-				<li class="list-group-item"><strong>Right shift</strong> <small>( &gt; )</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('3')">
-			These mathematical functions <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="3">
-			
-				<li class="list-group-item"><strong>Round value up to nearest integer</strong> <small>ceil(value)</small></li>
-			
-				<li class="list-group-item"><strong>Round value down to nearest integer</strong> <small>floor(value)</small></li>
-			
-				<li class="list-group-item"><strong>Round value to n decimal places</strong> <small>round(value, n)</small></li>
-			
-				<li class="list-group-item"><strong>Absolute value</strong> <small>abs(value)</small></li>
-			
-				<li class="list-group-item"><strong>Base 10 logarithm</strong> <small>log10(value)</small></li>
-			
-				<li class="list-group-item"><strong>Natural logarithm</strong> <small>ln(value)</small></li>
-			
-				<li class="list-group-item"><strong>Square root</strong> <small>sqrt(value)</small></li>
-			
-				<li class="list-group-item"><strong>Nth root</strong> <small>root(value, n)</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('4')">
-			These string functions <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="4">
-			
-				<li class="list-group-item"><strong>Concatenation</strong> <small>( + )</small></li>
-			
-				<li class="list-group-item"><strong>String length</strong> <small>strlen(value)</small></li>
-			
-				<li class="list-group-item"><strong>Substring</strong> <small>substr(string, start, length)</small></li>
-			
-				<li class="list-group-item"><strong>Character code to character</strong> <small>chr(value)</small></li>
-			
-				<li class="list-group-item"><strong>Character to character code</strong> <small>ord(value)</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('5')">
-			These trigonometric functions (angles are in degrees by default!) <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="5">
-			
-				<li class="list-group-item"><strong>Tangent</strong> <small>tan(value)</small></li>
-			
-				<li class="list-group-item"><strong>Cosine</strong> <small>cos(value)</small></li>
-			
-				<li class="list-group-item"><strong>Sine</strong> <small>sin(value)</small></li>
-			
-				<li class="list-group-item"><strong>Arc tangent</strong> <small>atan(value)</small></li>
-			
-				<li class="list-group-item"><strong>Arc cosine</strong> <small>acos(value)</small></li>
-			
-				<li class="list-group-item"><strong>Arc sine</strong> <small>asin(value)</small></li>
-			
-				<li class="list-group-item"><strong>Hyperbolic tangent</strong> <small>tanh(value)</small></li>
-			
-				<li class="list-group-item"><strong>Hyperbolic cosine</strong> <small>cosh(value)</small></li>
-			
-				<li class="list-group-item"><strong>Hyperbolic sine</strong> <small>sinh(value)</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('6')">
-			And the output format can be changed by added one of these decorators to the end of an expression <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="6">
-			
-				<li class="list-group-item"><strong>Integer</strong> <small>@i, @int, @integer</small></li>
-			
-				<li class="list-group-item"><strong>Floating point</strong> <small>@f, @float</small></li>
-			
-				<li class="list-group-item"><strong>Scientific notation</strong> <small>@sci, @scientific</small></li>
-			
-				<li class="list-group-item"><strong>Binary</strong> <small>@b, @bin, @binary</small></li>
-			
-				<li class="list-group-item"><strong>Octal</strong> <small>@o, @oct, @octal</small></li>
-			
-				<li class="list-group-item"><strong>Hexidecimal</strong> <small>@h, @hex, @hexadecimal</small></li>
-			
-				<li class="list-group-item"><strong>HTML color code</strong> <small>@c, @color, @colour</small></li>
-			
-		</ul>
-	
-		<div class="panel-body list-toggle" onClick="toggle('7')">
-			Values in expressions are recognized in these formats <span class="caret"></span>
-		</div>
-		<ul class="list-group" style="overflow: hidden; max-height: 0; transition:max-height 0.25s ease-out;" id="7">
-			
-				<li class="list-group-item"><strong>Integer</strong> <small>1234</small></li>
-			
-				<li class="list-group-item"><strong>Floating point</strong> <small>123.4</small></li>
-			
-				<li class="list-group-item"><strong>Scientific notation</strong> <small>1.23e+4 / 1.23e-4</small></li>
-			
-				<li class="list-group-item"><strong>Binary</strong> <small>0b111</small></li>
-			
-				<li class="list-group-item"><strong>Octal</strong> <small>0o777 / 0777</small></li>
-			
-				<li class="list-group-item"><strong>Hexadecimal</strong> <small>0xFE / #FF00FF</small></li>
-			
-				<li class="list-group-item"><strong>String</strong> <small>"string" / 'string'</small></li>
-			
-		</ul>
-	
+	<div class="panel-body">
+		Please click <a href="/Lavendeux/usage">here</a> for usage help, and a list of features
+	</div>
 
 	<div class="panel-body">
 		<dt>There are also many functions and decorators added by extensions, including many relevant to programming, and writing</dt>
