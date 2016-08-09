@@ -6,9 +6,9 @@
 				"name": "complement ( color )",
 				"added_in": "0.5.0",
 				"properties": [
-					{"name": "Arguments", "value": "A hexadecimal color code (eg, 0xFF00FF)"},
+					{"name": "Arguments", "value": "A hexadecimal color code (eg, #FF00FF)"},
 					{"name": "Returns", "value": "The complementary color code"},
-					{"name": "Note", "value": "Best used with the @h, @hex, or @hexadecimal decorators"}
+					{"name": "Note", "value": "Best used with the @c, @color, or @colour decorators"}
 				]
 			},
 			{
