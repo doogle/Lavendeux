@@ -40,6 +40,17 @@
 	},
 
 	{
+		"text": "These string functions",
+		"operators": [
+			{"name": "Concatenation", "operator": "( + )"},
+			{"name": "String length", "operator": "strlen(value)"},
+			{"name": "Substring", "operator": "substr(string, start, length)"},
+			{"name": "Character code to character", "operator": "chr(value)"},
+			{"name": "Character to character code", "operator": "ord(value)"},
+		]
+	},
+
+	{
 		"text": "These trigonometric functions (angles are in degrees by default!)",
 		"operators": [
 			{"name": "Tangent", "operator": "tan(value)"},
@@ -63,6 +74,7 @@
 			{"name": "Binary", "operator": "@b, @bin, @binary"},
 			{"name": "Octal", "operator": "@o, @oct, @octal"},
 			{"name": "Hexidecimal", "operator": "@h, @hex, @hexadecimal"}
+			{"name": "HTML color code", "operator": "@c, @color, @colour"}
 		]
 	},
 
