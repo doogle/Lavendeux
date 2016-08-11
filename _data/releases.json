@@ -1,5 +1,33 @@
 [
 	{
+		"name": "Beta Version 0.5.5",
+		"changelog": [
+			"The right DLL!",
+			"New documentation link on installer"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta Version 0.5.5 (No extensions)",
+		"changelog": [
+			"The right DLL!",
+			"New documentation link on installer"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+		}
+	},
+
+	{
 		"name": "Beta Version 0.5.4",
 		"changelog": [
 			"Added new built-in functions for strings",
